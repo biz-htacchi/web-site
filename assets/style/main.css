@@ -843,16 +843,37 @@ li {
     margin-top: 8.3rem;
     padding: 0  1.6rem;
 }
-
-.main-visual-faq__title-container {
-    margin-top: 2.6rem;
+@media(min-width:768px){
+    .main-visual-faq {
+        max-width: 123.2rem;
+        margin: 15.4rem auto 0;
+    }
 }
 
 .main-visual-faq__title {
     font-size: 3rem;
     font-weight: 700;
     color: #000000;
+    margin-top: 2.6rem;
 }
+@media(min-width:768px){
+    .main-visual-faq__title {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3.6rem;
+        margin-top: -11.3rem;
+        height: 11.3rem;
+        width: 32.7rem;
+        border-radius: 0 4rem 0 0;
+        background-color: #FFFFFF;
+        padding-bottom: .3rem;
+        padding-left: .5rem;
+    }
+}
+
+
 
 /* パンくずリスト
 --------------------------------------------------- */
@@ -863,6 +884,12 @@ li {
     padding: 0 1.5rem;
     margin-top: 2.8rem;
     color: #000000;
+}
+@media(min-width:768px){
+    .breadcrumb {
+        max-width: 131.6rem;
+        margin-top: 2.3rem;
+    }
 }
 
 .breadcrumb__list {
@@ -888,7 +915,17 @@ li {
 --------------------------------------------------- */
 .faq {
     margin-top: 3.85rem;
-    padding-bottom: 3.85rem;
+    padding-bottom: 15.35rem;
+}
+@media(min-width:768px){
+    .faq {
+        margin-top: 6.15rem;
+        padding-bottom: 4.7rem;
+    }
+    .faq__container {
+        max-width: 83.2rem;
+        margin: 0 auto;
+    }
 }
 
 .faq__container {
@@ -898,12 +935,23 @@ li {
 .faq__accordion-qa-item{
     border: .1rem solid #cccccc;
     border-radius: 1.6rem;
-    padding-bottom: 1.7rem;
-    margin-bottom: 2.35rem;
+    padding-bottom: 1.65rem;
+    margin-bottom: 2.38rem;
+}
+@media(min-width:768px){
+    .faq__accordion-qa-item{
+        padding-bottom: 1.75rem;
+        margin-bottom: 2.4rem;
+    }
 }
 
 .faq__question {
     padding: 1.95rem 2.3rem 0;
+}
+@media(min-width:768px){
+    .faq__question {
+        padding: 1.8rem 3.1rem 0;
+    }
 }
 
 .faq__label-content{
@@ -930,6 +978,12 @@ li {
     display: flex;
     gap: .8rem;
 }
+@media(min-width:768px){
+    .faq__question-label-list{
+        padding-top: .5rem;
+        margin-left: 1.5rem;
+    }
+}
 
 .faq__question-list-item{
     font-size: 1.1rem;
@@ -950,6 +1004,13 @@ li {
     padding: 0 4.3rem;
     line-height: 1.7;
 }
+@media(min-width:768px){
+    .faq__question-text {
+        font-size: 1.8rem;
+        margin-top: .8rem;
+        padding-left: 4.1rem;
+    }
+}
 
 .faq__answer-text {
     font-size: 1.6rem;
@@ -957,7 +1018,15 @@ li {
     color: #000000;
     padding: .3rem 2.4rem 0;
     line-height: 1.75;
+    letter-spacing: .01rem;
+    line-break: strict;
 }
+@media(min-width:768px){
+    .faq__answer-text {
+        padding: 1.8rem 1.5rem 0 3.1rem;
+    }
+}
+
 
 /* アイコン */
 .faq__accordion-toggle-icon {
@@ -966,6 +1035,12 @@ li {
     width: 1.9rem;
     height: 1.9rem;
     margin-top: .3rem;
+}
+@media(min-width:768px){
+    .faq__accordion-toggle-icon {
+        margin-top: .6rem;
+        margin-right: .05rem;
+    }
 }
 
 /* ＋（プラス）の横棒 */
@@ -992,6 +1067,13 @@ li {
     height: .2rem;
     background-color: #000000;
     transition: transform 0.3s ease;
+}
+@media(min-width:768px){
+    .faq__accordion-toggle-icon::before,
+    .faq__accordion-toggle-icon::after {
+        width: 2rem;
+        height: .25rem;
+    }
 }
 
 /* アコーディオンが開いた時（is-openクラスが付与された時） */
