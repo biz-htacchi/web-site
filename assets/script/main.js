@@ -22,6 +22,28 @@ $(window).on('resize', function () {
 });
 
 //==============================================//
+// Swiper
+//==============================================//
+var swiper = new Swiper('.swiper', {
+    loop: true,
+
+    // SP
+    slidesPerView: 1,
+    spaceBetween: 58,
+
+    autoplay: {
+      delay: 3000, // 3000ms = 3秒
+      disableOnInteraction: false,
+    },
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+});
+
+//==============================================//
 // Accordion
 //==============================================//
 $(document).ready(function() {

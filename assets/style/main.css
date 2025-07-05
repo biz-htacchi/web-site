@@ -839,25 +839,29 @@ li {
 
 /* main visual
 --------------------------------------------------- */
-.main-visual-faq {
+.main-visual-faq,
+.main-visual-spec {
     margin-top: 8.3rem;
     padding: 0  1.6rem;
 }
 @media(min-width:768px){
-    .main-visual-faq {
+    .main-visual-faq,
+    .main-visual-spec {
         max-width: 123.2rem;
         margin: 15.4rem auto 0;
     }
 }
 
-.main-visual-faq__title {
+.main-visual-faq__title,
+.main-visual-spec__title {
     font-size: 3rem;
     font-weight: 700;
     color: #000000;
     margin-top: 2.6rem;
 }
 @media(min-width:768px){
-    .main-visual-faq__title {
+    .main-visual-faq__title,
+    .main-visual-spec__title {
         position: relative;
         display: flex;
         align-items: center;
@@ -872,8 +876,6 @@ li {
         padding-left: .5rem;
     }
 }
-
-
 
 /* パンくずリスト
 --------------------------------------------------- */
@@ -911,11 +913,369 @@ li {
     color: #000000;
 }
 
+/* spec section-headline
+--------------------------------------------------- */
+.section__container {
+    padding: 0 1.6rem;
+}
+@media(min-width:768px){
+    .section__container {
+        max-width: 83.2rem;
+        margin: 0 auto;
+    }
+}
+
+.section__headline{
+    position: relative;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #000000;
+    display: inline-block;
+    width: 100%;
+}
+@media(min-width:768px){
+    .section__headline{
+        font-size: 2.8rem;
+    }
+}
+
+.section__headline::before {
+    content: '';
+    position: absolute;
+    bottom: -1.3rem;
+    left: 0;
+    width: 5rem;
+    height: .3rem;
+    background-color: #168352;
+    z-index: 1;
+}
+
+.section__headline::after {
+    content: '';
+    position: absolute;
+    bottom: -1.3rem;
+    left: 0;
+    width: 100%;
+    height: .3rem;
+    background-color: #dddddd;
+}
+
+@media(min-width:768px){
+    .section__headline::before,
+    .section__headline::after {
+        height: .5rem;
+        bottom: -2.8rem;
+    }
+    .section__headline::before{
+        width: 10rem;
+    }
+}
+
+/* spec-gallery section
+--------------------------------------------------- */
+.spec-gallery{
+    margin-top: 3.5rem;
+}
+@media(min-width:768px){
+    .spec-gallery{
+        margin-top: 5.7rem;
+    }
+}
+
+.spec-gallery__carousel-wrapper {
+    position: relative;
+    margin-top: 3.7rem;
+}
+@media(min-width:768px){
+    .spec-gallery__carousel-wrapper {
+        margin-top: 6rem;
+    }
+}
+
+.spec-gallery__carousel{
+    border-radius: 2.4rem;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 358/237;
+}
+@media(min-width:768px){
+    .spec-gallery__carousel{
+        aspect-ratio: 8/5;
+    }
+}
+
+.spec-gallery__image-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spec-gallery__image{
+    transform: scale(1.12) translate(-.35rem, -.5rem);
+}
+@media(min-width:768px){
+    .spec-gallery__image{
+        transform: none;
+    }
+}
+
+.spec-gallery__carousel-pagination {
+    position: absolute;
+    margin-bottom: 0;
+    --swiper-pagination-bullet-horizontal-gap: .3rem;
+}
+@media(min-width:768px){
+    .spec-gallery__carousel-pagination {
+        margin-bottom: 1.2rem;
+    }
+}
+
+.spec-gallery__carousel-pagination .swiper-pagination-bullet {
+    width: .8rem;
+    height: .8rem;
+    background: #EEEEEE;
+    opacity: 1;
+}
+
+.spec-gallery__carousel-pagination .swiper-pagination-bullet-active {
+    background: #168352;
+}
+
+/* spec-features sectoin
+--------------------------------------------------- */
+.spec-features{
+    margin-top: 6rem;
+}
+@media (min-width:768px){
+    .spec-features {
+        margin-top: 6.55rem;
+    }
+}
+
+.spec-features__content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3.4rem;
+    margin-top: 3.7rem;
+}
+@media (min-width:768px){
+    .spec-features__content-container{
+        flex-direction: row;
+        gap: 3.1rem;
+        margin-top: 6rem;
+    }
+}
+
+.spec-features__content {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.6rem;
+    overflow: hidden;
+}
+@media (min-width:768px){
+    .spec-features__content {
+        width: 100%;
+    }
+}
+
+.spec-features__content-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000000;
+    padding-top: .75rem;
+    line-height: 1.75;
+    line-break: loose;
+}
+
+
+/* spec-price section
+--------------------------------------------------- */
+.spec-price{
+    margin-top: 5.5rem;
+}
+@media (min-width:768px){
+    .spec-price{
+        margin-top: 5.85rem;
+    }
+}
+
+.spec-price__value{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #000000;
+    margin-top: 3rem;
+}
+.spec-price__value-tax{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.6rem;
+}
+@media (min-width:768px){
+    .spec-price__value{
+        margin-top: 5.3rem;
+    }
+}
+/* spec-spec section
+--------------------------------------------------- */
+.spec-spec{
+    margin-top: 5.8rem;
+}
+@media (min-width:768px){
+    .spec-spec{
+        margin-top: 6.4rem;
+    }
+}
+
+.spec-spec__title{
+    font-size: 2rem;
+    font-weight: 700;
+    height: 3rem;
+    border-left: .2rem solid #168352;
+    margin-top: 3.7rem;
+    padding: .15rem 1.6rem;
+}
+@media (min-width:768px){
+    .spec-spec__title{
+        font-size: 2.4rem;
+        height: 4rem;
+        border-left: .3rem solid #168352;
+        margin-top: 6rem;
+        margin-left: 3rem;
+        padding: .5rem 1.65rem;
+    }
+}
+
+.spec-spec__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.7rem;
+}
+@media (min-width:768px){
+    .spec-spec__table {
+        max-width: 74rem;
+        margin: 2.4rem auto;
+    }
+}
+
+.spec-spec__table-item,
+.spec-spec__table-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #000000;
+    border: 1px solid #dddddd;
+    background-color: #f5f5f5;
+    text-align: left;
+    height: 3.9rem;
+    padding-top: .9rem;
+    padding-left: 1.9rem;
+}
+
+.spec-spec__table-value{
+    font-weight: 400;
+    background-color: #ffffff;
+}
+@media (min-width:768px){
+    .spec-spec__table-item,
+    .spec-spec__table-value {
+        height: 6.3rem;
+        padding-top: 0;
+    }
+
+    .spec-spec__table-item {
+        width: 19.9rem;
+    }
+
+    .spec-spec__table-value {
+        padding-left: 2.3rem;
+    }
+}
+
+@media screen and (max-width: 767.9px) {
+    .spec-spec__table,
+    .spec-spec__table thead,
+    .spec-spec__table tbody,
+    .spec-spec__table th,
+    .spec-spec__table td,
+    .spec-spec__table tr {
+        display: block; /* すべてのテーブル要素をブロック要素として扱う */
+    }
+}
+
+/* spec-contact section
+--------------------------------------------------- */
+.spec-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 36rem;
+    margin-top: 6.5rem;
+}
+@media(min-width:768px){
+    .spec-contact {
+        margin-top: 7rem;
+        height: 45rem;
+    }
+}
+
+.spec-contact__bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.spec-contact__bg-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.spec-contact__btn-contact {
+    z-index: 3;
+    font-size: 2rem;
+    font-weight: 700;
+    width: 35.8rem;
+    height: 8rem;
+    text-align: center;
+    border: .2rem solid #FFFFFF;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border-radius: 4rem;
+    padding-top: 2.4rem;
+}
+
+.spec-contact__btn-contact:hover {
+    background-color: #FFFFFF;
+    color: #168352;
+}
+
+.spec-contact__bg-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+
 /* faq-section
 --------------------------------------------------- */
 .faq {
     margin-top: 3.85rem;
     padding-bottom: 15.35rem;
+}
+.faq__container {
+    padding: 0 1.6rem;
 }
 @media(min-width:768px){
     .faq {
@@ -928,9 +1288,6 @@ li {
     }
 }
 
-.faq__container {
-    padding: 0 1.6rem;
-}
 
 .faq__accordion-qa-item{
     border: .1rem solid #cccccc;
@@ -1019,7 +1376,7 @@ li {
     padding: .3rem 2.4rem 0;
     line-height: 1.75;
     letter-spacing: .01rem;
-    line-break: strict;
+    line-break: loose;
 }
 @media(min-width:768px){
     .faq__answer-text {

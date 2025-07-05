@@ -19,6 +19,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/3ea11fe6fa.js" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
         <!-- リセットCSS -->
         <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
         <link href="/assets/style/main.css" rel="stylesheet">
@@ -26,19 +33,189 @@
 
     <body>
         <header class="header">
+            <div class="header__container">
+                <h1 class="header__logo">
+                    <img class="header__logo-image" src="/assets/image/top/header_logo.png" alt="">
+                </h1>
 
+                <!-- ハンバーガーボタン -->
+                <button type="button" class="header__hamburger-button">
+                    <img class="header__hamburger-button-image" src="/assets/image/top/header_ico_bar.png" alt="">
+                </button>
+
+                <!-- ハンバーガーメニュー -->
+                <div class="header__hamburger-menu header__nav">
+                    <ul class="header__menu-list header__nav-list">
+                        <li class="header__list no_pc"><a href="/">トップ</a></li>
+                        <li class="header__list header_spec"><a href="/price">価格・スペック</a></li>
+                        <li class="header__list"><a href="/faq">よくあるご質問</a></li>
+                    </ul>
+                </div>
+            </div>
         </header>
 
         <main>
+            <section class="main-visual-spec">
+                <div class="main-visual-spec__cover">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="/assets/image/spec/mainVisual_spec_img.png">
+                        <img src="/assets/image/spec/mainVisual_spec_img_pc.png" alt="">
+                    </picture>
+                </div>
+                <h2 class="main-visual-spec__title">価格・スペック</h2>
+            </section>
 
+            <nav class="breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item">
+                        <a href="/" class="breadcrumb__link">トップ</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        価格・スペック
+                    </li>
+                </ol>
+            </nav>
+
+            <section class="spec-gallery">
+                <div class="spec-gallery__container section__container">
+                    <h2 class="spec-gallery__headline section__headline">ギャラリー</h2>
+                    <div class="spec-gallery__carousel-wrapper">
+                        <div class="swiper spec-gallery__carousel">
+                            <div class="swiper-wrapper spec-gallery__slides">
+                                <div class="swiper-slide spec-gallery__slide">
+                                    <div class="spec-gallery__image-wrapper">
+                                        <img class="spec-gallery__image" src="/assets/image/spec/pht_products_service_carousel_img1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide spec-gallery__slide">
+                                    <div class="spec-gallery__image-wrapper">
+                                        <img class="spec-gallery__image" src="/assets/image/spec/pht_products_service_carousel_img2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide spec-gallery__slide">
+                                    <div class="spec-gallery__image-wrapper">
+                                        <img class="spec-gallery__image" src="/assets/image/spec/pht_products_service_carousel_img3.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination spec-gallery__carousel-pagination"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="spec-features">
+                <div class="spec-features__container section__container">
+                    <h2 class="spec-features__headline section__headline">特長</h2>
+                    <div class="spec-features__content-container">
+                        <div class="spec-features__content">
+                            <div class="spec-features__content-image">
+                                <picture>
+                                    <source media="(max-width: 767px)" srcset="/assets/image/spec/products-service-feature_img1.png">
+                                    <img src="/assets/image/spec/products-service-feature_img1_pc.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="spec-features__content-text">自動操縦が可能で、短時間で大量の農作物を監視、収穫、播種、散布などの作業ができます。</div>
+                        </div>
+                        <div class="spec-features__content">
+                            <div class="spec-features__content-image">
+                                <picture>
+                                    <source media="(max-width: 767px)" srcset="/assets/image/spec/products-service-feature_img2.png">
+                                    <img src="/assets/image/spec/products-service-feature_img2_pc.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="spec-features__content-text">高精度のカメラやセンサーを搭載しており、正確な土壌・作物の情報を収集でき、水や肥料などの資源を適切に配分できます。</div>
+                        </div>
+                        <div class="spec-features__content">
+                            <div class="spec-features__content-image">
+                                <picture>
+                                    <source media="(max-width: 767px)" srcset="/assets/image/spec/products-service-feature_img3.png">
+                                    <img src="/assets/image/spec/products-service-feature_img3_pc.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="spec-features__content-text">必要な場所にだけ肥料や農薬を散布することができます。これにより、農薬や肥料の過剰使用が抑えられ、環境負荷やコスト削減に繋がります。</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="spec-price">
+                <div class="spec-price__container section__container">
+                    <h2 class="spec-price__headline section__headline">メーカー希望小売価格</h2>
+                    <p class="spec-price__value">¥550,000<span class="spec-price__value-tax">（税込）</span> </p>
+                </div>
+            </section>
+
+            <section class="spec-spec">
+                <div class="spec-spec__container section__container">
+                    <h2 class="spec-spec__headline section__headline">スペック</h2>
+                    <p class="spec-spec__title">機体</p>
+                    <table class="spec-spec__table">
+                        <tbody>
+                            <tr>
+                                <th class="spec-spec__table-item">ドローン名</th>
+                                <td class="spec-spec__table-value">アグリ・ファルコン</td>
+                            </tr>
+                            <tr>
+                                <th class="spec-spec__table-item">製品番号</th>
+                                <td class="spec-spec__table-value">AGF-100</td>
+                            </tr>
+                            <tr>
+                                <th class="spec-spec__table-item">飛行時間</th>
+                                <td class="spec-spec__table-value">60 分</td>
+                            </tr>
+                            <tr>
+                                <th class="spec-spec__table-item">最大積載量</th>
+                                <td class="spec-spec__table-value">5 kg</td>
+                            </tr>
+                            <tr>
+                                <th class="spec-spec__table-item">操作距離</th>
+                                <td class="spec-spec__table-value">3 km</td>
+                            </tr>
+                            <tr>
+                                <th class="spec-spec__table-item">機体重量</th>
+                                <td class="spec-spec__table-value">8 kg</td>
+                            </tr>
+                            <tr>
+                                <th class="spec-spec__table-item">期待寸法</th>
+                                <td class="spec-spec__table-value">150 x 150 x 40 cm</td>
+                            </tr>
+                            <tr>
+                                <th class="spec-spec__table-item">機能・特徴</th>
+                                <td class="spec-spec__table-value">自動操縦、植物生育モニタリング、農薬散布</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                </div>
+            </section>
+
+            <section class="spec-contact">
+                <div class="spec-contact__bg-image">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="/assets/image/spec/contact_bg.png">
+                        <img src="/assets/image/spec/contact_bg_pc.png" alt="">
+                    </picture>
+                </div>
+                <a href="/contact" class="spec-contact__btn-contact">お問い合わせ</a>
+            </section>
         </main>
 
         <footer class="footer">
-
+            <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li class="footer__list-item"><a href="/price">価格・スペック</a></li>
+                    <li class="footer__list-item"><a href="/faq">よくあるご質問</a></li>
+                </ul>
+            </nav>
         </footer>
 
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- swiper -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <!-- JSファイル -->
         <script src="/assets/script/main.js"></script>
     </body>
