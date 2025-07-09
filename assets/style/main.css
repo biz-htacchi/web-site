@@ -1202,6 +1202,13 @@ li {
     .spec-spec__table tr {
         display: block; /* すべてのテーブル要素をブロック要素として扱う */
     }
+
+    .spec-spec__table-item {
+        border-bottom:none;
+    }
+    .spec-spec__table tr:not(:last-child) .spec-spec__table-value {
+        border-bottom:none;
+    }
 }
 
 /* spec-contact section
